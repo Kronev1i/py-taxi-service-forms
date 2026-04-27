@@ -7,5 +7,6 @@
     {% csrf_token %}
     {{ form|crispy }}
     <input class="btn btn-primary" type="submit" value="Submit">
+    <a href="{{ request.META.HTTP_REFERER|default:'' }}" class="btn btn-secondary">Cancel</a>
   </form>
 {% endblock %}
